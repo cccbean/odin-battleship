@@ -1,0 +1,49 @@
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  --main-spacing: 2rem;
+  padding: var(--main-spacing);
+  height: 100vh;
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+  gap: var(--main-spacing);
+}
+
+.gameboard-wrapper {
+  aspect-ratio: 1;
+  display: grid;
+  grid-template: 1fr min-content / min-content 1fr;
+  gap: 1rem;
+}
+
+.gameboard {
+  display: grid;
+  grid-template: repeat(10, 1fr) / repeat(10, 1fr);
+}
+
+.cell {
+  background-color: lightblue;
+  opacity: 0.5;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.cell:hover {
+  opacity: 1;
+}
+
+.x-axis {
+  grid-column-start: 2;
+  display: flex;
+  justify-content: space-around;
+}
+
+.y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

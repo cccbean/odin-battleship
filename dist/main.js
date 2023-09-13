@@ -1,0 +1,1 @@
+(()=>{"use strict";document.querySelectorAll(".gameboard").forEach((function(a){for(var c=0;c<10;c++)for(var e=0;e<10;e++){var t=document.createElement("div");t.classList.add("cell"),t.dataset.coord="".concat(e,",").concat(9-c),a.appendChild(t)}}))})();
